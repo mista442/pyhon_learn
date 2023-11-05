@@ -1,5 +1,3 @@
-import HEAD
-
 a='a kto eto sdelal?'
 
 print("a =",a)
@@ -15,6 +13,8 @@ d=a.split('o') #функция split в питоне создает раздел
 print("d=a.split('o')")
 print("d = ",d) # ['a kt', ' et', ' sdelal?']
 print(type(d)) # теперь тип данных поменялся - стал list вместо str.
+print(d[1]) # вывести второй список индекса из листа. Выведется ' et'.
+
 #---------------------------------------------
 print()
 

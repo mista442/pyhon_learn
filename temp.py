@@ -31,17 +31,17 @@
 
 #------------------------------------------------------
 
-b="Gamburgernaya ulitsa"
-# 0   2   4   6   8
-# G a m b u r g e r n a y a   u l i t s a
-#        -15           -8  -6  -4  -2  -1
-
-#c 0 до 19
-#или -1 до -20
-
-print(b[3:8]) #burge
-print(b[15:-10]) #пусто
-print(b[:9]) #Gamburger
-print(b[14:]) #ulitsa - не верно
-print(b[-3:-7]) #a ulitsa - не верно
-print(b[-15:8]) #urge - не верно
+# b="Gamburgernaya ulitsa"
+# # 0   2   4   6   8
+# # G a m b u r g e r n a y a   u l i t s a
+# #        -15           -8  -6  -4  -2  -1
+#
+# #c 0 до 19
+# #или -1 до -20
+#
+# print(b[3:8]) #burge
+# print(b[15:-10]) #пусто
+# print(b[:9]) #Gamburger
+# print(b[14:]) #ulitsa - не верно
+# print(b[-3:-7]) #a ulitsa - не верно
+# print(b[-15:8]) #urge - не верно

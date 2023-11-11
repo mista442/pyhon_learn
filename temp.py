@@ -45,3 +45,59 @@
 # print(b[14:]) #ulitsa - не верно
 # print(b[-3:-7]) #a ulitsa - не верно
 # print(b[-15:8]) #urge - не верно
+#                       6
+# a=[1, 2, 2, 4, 5, 4, [2, 2], 2]
+# b=a[:]
+#
+# print(id(a))
+# print(id(b))
+# # print(b.count(2))
+
+#--------------------------------------
+
+# a=int(input("длина "))
+# b=int(input("ширина "))
+# c=int(input("высота "))
+#
+# print(a,"",b,"",c,"")
+
+# аналогично эти команды можно записать в 2 строки:
+
+# a,b,c=int(input("длина ")),(input("ширина ")),(input("высота "))
+# print(a,'',b,'',c,'')
+
+# a=list(input("длина ширина высота\n"))
+# print(a)
+
+# print('введите размер ящика:')
+# a,b,c=int(input("высота ")),int(input("ширина ")),int(input("глубина "))
+# print(a,'',b,'',c,'')
+# print()
+#
+# print('введите размеры двери:')
+# x,y=int(input("высота ")),int(input("ширина "))
+# print(x,'',y,'')
+#
+# if x<=a and y<=b:
+#     print("YES")
+# else:
+#     print("NO")
+
+#---------------------------------------
+
+# цикл for с счетчиком цикла
+
+
+# Задание: посчитать все Hello
+a = (5,'Hello', 2.3, True,[21,17,'Hello',35],'Hello', ('By', 'Hello'))
+# Считаем сколько Hello у нас в кортеже без учета вложенных списков и кортежей
+helloCount = a.count('Hello')
+# Проходим в цикле по всем элементам и проверяем не является ли элемент списком/кортежем
+for iter in a:
+    # Если элемент является списком/кортежем, то считаем сколько в нем Hello и суммируем с найденым ранее
+    if type(iter) == list or type(iter) == tuple:
+        helloCount = helloCount + iter.count('Hello')
+
+print('Hello найдено', helloCount, 'штуки')
+
+

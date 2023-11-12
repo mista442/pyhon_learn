@@ -85,19 +85,81 @@
 
 #---------------------------------------
 
-# цикл for с счетчиком цикла
+# while - предусловие
 
+# total = 100000
+# i = 0
+# while i < 5:
+#     n = int(input())
+#     total = total - n
+#     i = i + 1
+# print("Осталось", total)
 
-# Задание: посчитать все Hello
-a = (5,'Hello', 2.3, True,[21,17,'Hello',35],'Hello', ('By', 'Hello'))
-# Считаем сколько Hello у нас в кортеже без учета вложенных списков и кортежей
-helloCount = a.count('Hello')
-# Проходим в цикле по всем элементам и проверяем не является ли элемент списком/кортежем
-for iter in a:
-    # Если элемент является списком/кортежем, то считаем сколько в нем Hello и суммируем с найденым ранее
-    if type(iter) == list or type(iter) == tuple:
-        helloCount = helloCount + iter.count('Hello')
+# import random
+#
+# value = random.randint(1,36)
+# #print (value)
+# count=0
+# flag=0
+#
+# while flag==0:
+#     n = int(input())
+#     if n == value:
+#         flag=1
+#         count=count+1
+#     elif value >n:
+#         print("загаданное число больше")
+#         count=count+1
+#     else:
+#         print("загаданное число меньше")
+#         count=count+1
+# print("количество попыток", count)
 
-print('Hello найдено', helloCount, 'штуки')
+# import random
+#
+# n = int(input("введите количество чисел\n"))
+# count_user=0
+# min=0
+#     while count_user < n:
+#         value = random.randint(1, 1000)
+#     if n == value:
+#         flag=1
+#         count=count+1
+#     elif value >n:
+#         print("загаданное число больше")
+#         count=count+1
+#     else:
+#         print("загаданное число меньше")
+#         count=count+1
+# print("количество попыток", count)
+
+#Дан список
+#       0   1  2  3 4  5  6     count_1
+list_1=[21,22,23,24,25,26,27, 28]
+# пользователь вводит два числа, например 5,  2
+# вывести все значения списка которые делятся на первое число ИЛИ на второе число
+# ИЛИ на разницу чисел 5 - 2 = 3
+
+#замечание: использование множеств ЗАПРЕЩЕНО!!!
+
+# 21,22,24,25,25,27,28
+
+flag=True
+while flag:
+    try:
+        print("введите два целых числа")
+
+        num1=int(input())
+        num2=int(input())
+
+        list_2=[]
+
+        for elm in list_1:
+
+            if elm % num1 == 0 or elm % num2 == 0 or elm % (num1-num2) == 0:
+                list_2.append(elm)
+        print(list_2)
+    except ZeroDivisionError:
+      print("делить на ноль нельзя")
 
 

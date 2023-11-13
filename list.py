@@ -95,6 +95,7 @@
 
 # a=45
 # a[0]=3
+
 # print(a) #TypeError: 'str' object does not support item assignment - типы данных int,str,float,complex,frozen set
 # относятся к неизменяемым типам данных (immutable) и поменять значение внутри переменной нельзя.
 
@@ -173,7 +174,7 @@ print()
 
 #------- через присвоение переменной ------#
 
-#[15, 28, 'world', 'tank', ['world', 'test', -3.5, 99], 'test', 45, 'change']
+# c = [15, 28, 'world', 'tank', ['world', 'test', -3.5, 99], 'test', 45, 'change']
 print(c)
 d=c
 c[4][2]=-1.0

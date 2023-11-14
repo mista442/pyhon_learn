@@ -38,8 +38,68 @@ print("id(b)",id(b)) # the same id like 'c'
 # c = (1, 2.2, 'test', -8, [10, -5, 'hello', 99])
 print()
 
-c[4]=b[4][:] # но так не работает. TypeError: 'tuple' object does not support item assignment.
+#c[4]=b[4][:] # но так не работает. TypeError: 'tuple' object does not support item assignment.
 # 27:33 на этой минуте про это говриться в 3_lection_листы_кортежы_множества_05.11.23_1.mp4
 
+#----------------------------- размер данных в переменной----------------
 
+#листы занимают больше места чем кортежы.
 
+print()
+
+a1=[1,2,3]
+b1=(1,2,3)
+
+c1=[1,2,3,4,10,24,'hello',2.3,15]
+d1=(1,2,3,4,10,24,'hello')
+
+print(a1.__sizeof__()) # вывести размер данных в переменной a1
+print(b1.__sizeof__())
+print(c1.__sizeof__())
+print(d1.__sizeof__())
+
+#---------------------- изменения типа данных
+
+a2=[1,2,3]
+b2=tuple(a2)
+
+print()
+
+print(id(a2))
+print(id(b2))
+
+a2[1]=22
+
+print("type b2 =", type(b2)) # tuple
+print(b2) # (1,2,3)
+print("type a2 =", type(a2)) # при этом a2 остается типом list
+print(a2) # [1,22,3]
+
+#-------------
+print()
+
+a3=[1,2,3,[10,11,12]]
+b3=tuple(a3)
+
+print()
+
+print(id(a3))
+print(id(b3))
+
+a3[3][2]=221 # list внутри кортежа передается по ссылке. изменения сделанные списке переменной a - так же применяться и для списка переменной b.
+
+print("type b3 =", type(b3)) # tuple
+print("type b3[3] =", type(b3[3])) # list
+print(b3) # (1,2,3)
+print("type a3 =", type(a3)) # при этом a2 остается типом list
+print(a3) # [1,22,3]
+
+#------------------- переделка типа данных list в tuple
+print()
+
+l=[45,18,21,'hello']
+print("id l before convert",id(l))
+l=tuple(l)
+print(type(l))
+print("id l after convert", id(l)) # выделяется новый участок памяти для переменной l, т.к. теперь это новый тип данных
+# и т.к. tuple < чем list по обьему памяти. Поэтому tuple в list запихнуть не получится. Нужен новый участок памяти.

@@ -20,7 +20,7 @@ if num1 % 2 != 0 and num2 % 2 != 0:
     print("cумма нечетных чисел равна", num1 + num2)
 
 # Находит максимум из двух чисел если одно число нечетное, а другое четное
-if (num1 % 2 == 0 and num2 % 2 != 0) or (num1 % 2 != 0 and num2 % 2) == 0:
+if (num1 % 2 == 0 and num2 % 2 != 0) or (num1 % 2 != 0 and num2 % 2 == 0):
     if num1 > num2:
         print(num1, "наибольшее число")
     elif num2 > num1:

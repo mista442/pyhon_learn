@@ -8,8 +8,9 @@ while flag:
 
     if a == value:
         print("вы угадали число")
+        flag = False
     elif a > value:
-        print("введенное число больше загаданного")
+        print("введите число меньше")
     elif a < value:
-        print("введенное число меньше загаданного")
+        print("введите число больше")
 flag=False

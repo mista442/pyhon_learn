@@ -24,13 +24,9 @@ while flag1:
     else:
         flag1=False
 
-Va=a*b*c # считаем объем коробки
-Va1=a1*b1*c1 # считаем объем ящика
+if a1 > a and b1 > b1 and c1 > c:
+    print()
 
-print("\nобъем коробки =", Va)
-print("объем ящика =", Va1)
-
-if Va < Va1:
     print("\nкоробка влезает в ящик")
 else:
     print("\nкоробка не влезает в ящик")

@@ -17,12 +17,9 @@ while flag:
         flag=False
 
 import random
-rand1 = random.randint(1,100)
-rand2 = random.randint(1,100)
 
-l=[]
-l.append(rand1)
-l.append(rand2)
+# внутри списка задаем два рандомных значения от 0 до 100, далее сортируем их.
+l=[random.randint(1,100),random.randint(1,100)]
 l.sort()
 
 flag1=True

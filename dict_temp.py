@@ -88,4 +88,34 @@ print(floor1['Sw0']) # тоже самое что и строчка выше
 
 с = {1:10,1:45,2:18,1:33}
 с.clear()
-print(c)
+print(с) # {}
+
+#---------- добавление в словарь новые ключи
+
+employees = {'Sergey': 32, 'Anton': 48, 'Vasiliy': 23}
+employees["Olga"]=32 # добавится последним элементов в словаре ключ Olga со значением 32
+print(employees) # {'Sergey': 32, 'Anton': 48, 'Vasiliy': 23, 'Olga': 32}
+
+#---------- удаление из словаря ключей
+
+del employees["Olga"] # удалить ключ Olga из словаря employees
+print(employees) # {'Sergey': 32, 'Anton': 48, 'Vasiliy': 23}
+
+#---------- присвание по ссылке и копирование по значению
+
+#аналогично как в списках - при присваивании через переменную - копирование делается по ссылке.
+
+new=employees
+del employees['Anton']
+
+print(employees) # {'Sergey': 32, 'Vasiliy': 23}
+print(new) # {'Sergey': 32, 'Vasiliy': 23}
+
+# id у них тоже будет одинаковый
+
+# А через метод copy копируем по значению.
+new=employees.copy()
+employees['Anton']=18
+
+print(employees) # {'Sergey': 32, 'Vasiliy': 23, 'Anton': 18}
+print(new) # {'Sergey': 32, 'Vasiliy': 23}

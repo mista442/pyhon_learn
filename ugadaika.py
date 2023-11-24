@@ -1,16 +1,22 @@
 import random
-value = random.randint(1,10)
+value = random.randint(1,100)
 
-flag=True
-while flag:
-    print("введите число")
+print("Угадайте целое число от 1 до 100. \nВсего 6 попыток.")
+print("\nВведите число")
+
+i = 0
+v = 6
+while i < 6:
+    v = v - 1
     a=int(input())
 
+    i = i + 1
+
     if a == value:
-        print("вы угадали число")
-        flag = False
+        print("Вы угадали число!! Yep! :)")
+    elif i == 6:
+        print("Вы не угадали число! :((")
     elif a > value:
-        print("введите число меньше")
+        print("Введите число меньше.","Осталось",v,"попыток")
     elif a < value:
-        print("введите число больше")
-flag=False
+        print("Введите число больше.","Осталось",v,"попыток")

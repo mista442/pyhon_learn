@@ -166,3 +166,21 @@
 # a = [10,11,12,11,13,13,45,76,11]
 # for i in a:
 #     print(a.index(11))
+
+# b=0
+# a=50
+# n=98
+# if n == 100:
+#     b = n + a
+# print(b)
+
+# while True:
+#     print('hello')
+
+total = 100
+i = 0
+while i < 5:
+    n = int(input())
+    total = total - n
+    i = i + 1
+print("Осталось", total)

@@ -171,8 +171,21 @@ print(d1)
 d2 = {"Alexey":"manager","Olga":"tester"}
 print(d2)
 
+#------ метод .setdefault() - добавить новый элемент с ключом и значением в словарь
 
+d2.setdefault('Sergey','Cdder') # аналогично команде - d2["Sergey1"]='Coder'
+print(d2) #{'Alexey': 'manager', 'Olga': 'tester', 'Sergey': 'Cdder'}
 
+#------ метод .update - обьединить два словаря в один. Работает как конкатенация (сложение) строк.
+# в качестве аргумента можно указать словарь, или переменную содержащую словарь
+
+d2.update({1:10,20:12})
+print(d2) # {'Alexey': 'manager', 'Olga': 'tester', 'Sergey': 'Cdder', 1: 10, 20: 12}
+
+d3={'Olga':'worker','John':'Admin',1:9,21:45}
+
+d2.update(d3) # если ключи пересекаются при обьединении, то берется значение из последнего ключа (из того, который присоедияем)
+print(d2) # {'Alexey': 'manager', 'Olga': 'worker', 'Sergey': 'Cdder', 1: 9, 20: 12, 'John': 'Admin', 21: 45}
 
 
 

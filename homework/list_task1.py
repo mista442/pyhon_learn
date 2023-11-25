@@ -3,17 +3,29 @@
 элементы и удаляет их из списка. Например, дан список (1,1,1,2,3,4,2,3,4) результат
 (1,2,3,4)'''
 
-import random
-
-for i in [1..10]:
-
-a=[random.randint(1,10)]
-print(a)
-
-
-# a = [1,1,2,3,1,5,10,1,4]
-# print(type(a))
-# a=set(a)
+# import random
 #
+# for i in [1..10]:
+#
+# a=[random.randint(1,10)]
 # print(a)
-# print(type(a))
+
+
+# a = [1,1,2,3,1,3,2,10,1,4]
+# count1=0
+# d=1
+# while count1 < 10:
+# #    if a[count1].count > 1:
+#     if a.count(a[count1]) > 1:
+#         print(a.index(a[count1]))
+#     count1 = count1 + 1
+# print(a)
+
+
+#print(a.count(1))
+
+a = [1,1,2,3,1,3,2,10,1,4]
+count1=0
+d=1
+#while count1 < 10:
+print(a.index(1,2))

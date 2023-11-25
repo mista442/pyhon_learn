@@ -3,29 +3,20 @@
 элементы и удаляет их из списка. Например, дан список (1,1,1,2,3,4,2,3,4) результат
 (1,2,3,4)'''
 
-# import random
-#
-# for i in [1..10]:
-#
-# a=[random.randint(1,10)]
-# print(a)
+import random
+rand_list=[]
 
+# генерируем 10 рандомных чисел в диапазоне от 1 до 10
+for i in range(10):
+ a=random.randint(1,10)
+ rand_list.append(a)
+print(rand_list) # выводим сгенерированный компьютером лист
 
-# a = [1,1,2,3,1,3,2,10,1,4]
-# count1=0
-# d=1
-# while count1 < 10:
-# #    if a[count1].count > 1:
-#     if a.count(a[count1]) > 1:
-#         print(a.index(a[count1]))
-#     count1 = count1 + 1
-# print(a)
+uniq_list=[] # создаем пустой список, куда будем складывать только неповторяющиеся числа
 
+for v in rand_list: # перебераем каждый элемент из ранее сгенерированного списка
+ if v not in uniq_list: # если перебираемого элемента нет в текущем списке, то добавляем его
+  uniq_list.append(v)
 
-#print(a.count(1))
+print(uniq_list) # выводим отсортированный список
 
-a = [1,1,2,3,1,3,2,10,1,4]
-count1=0
-d=1
-#while count1 < 10:
-print(a.index(1,2))

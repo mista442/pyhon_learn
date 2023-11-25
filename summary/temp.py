@@ -184,3 +184,7 @@
 #     total = total - n
 #     i = i + 1
 # print("Осталось", total)
+
+
+s='hello w'
+print(s+'orld')

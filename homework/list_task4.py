@@ -7,19 +7,32 @@
 
 a = [10,1,4,1,2,8,10,4,5]
 
-min-index=[1,3] # индекс числа 1
-man-index=[0,6] # индекс числа 10'''
+min_index=[1,3] # индекс числа 1
+max_index=[0,6] # индекс числа 10'''
 
 a = [10,1,4,1,2,8,10,4,5]
+
 min1=min(a)
 max1=max(a)
+count_min = 0
+count_max = 0
 
-#print(min1)
-#print(a.index(min1))
-#print(max1)
+min_index=[]
+max_index=[]
 
-count=0
 for i in a:
     if i == min1:
-        count += 1
-        print(a.index(min1))
+        min_index.append(count_min) # добавляем в список только номер индекса, значение которого == min1
+    count_min +=1
+print(min_index)
+
+for i in a:
+    if i == max1:
+        max_index.append(count_max) # добавляем в список только номер индекса, значение которого == max1
+    count_max +=1
+print(max_index)
+
+b=[]
+b=a[:]
+
+# надо как-то для указанных номеров индексов теперь поменять значения

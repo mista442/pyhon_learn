@@ -1,38 +1,28 @@
 # Задача 4 Поменять местами самый большой и самый маленький элементы списка
 
-'''заметки: узнать все индексы для min1 и max1
-сохранить номера этих индексов списком куда-то. Например max-index1 max-index2
-в цикле берем по очереди номера индексов из сохраненной переменной для max1_index1 и записываем их в min_index1
-индес min1 меняем на индекс max1 и все это делаем в цикле
+import random
 
-a = [10,1,4,1,2,8,10,4,5]
+a=[] # задаем пустой список, кода будем добавлять сгенерированные компьютером числа.
 
-min_index=[1,3] # индекс числа 1
-max_index=[0,6] # индекс числа 10'''
+for i in range(10):
+    random_list=random.randint(1,100)
+    a.append(random_list)
 
-a = [10,1,4,1,2,8,10,4,5]
+print(a)
 
 min1=min(a)
 max1=max(a)
-count_min = 0
-count_max = 0
+print("\nминимальное число в индексе:",min1)
+print("максимальное число в индексе:",max1)
 
-min_index=[]
-max_index=[]
+min1_index = a.index(min1)
+max1_index = a.index(max1)
 
-for i in a:
-    if i == min1:
-        min_index.append(count_min) # добавляем в список только номер индекса, значение которого == min1
-    count_min +=1
-print(min_index)
+print("\nиндекс минимального числа:", min1_index)
+print("индекс максимального числа:", max1_index)
 
-for i in a:
-    if i == max1:
-        max_index.append(count_max) # добавляем в список только номер индекса, значение которого == max1
-    count_max +=1
-print(max_index)
+a[min1_index] = max1
+a[max1_index] = min1
 
-b=[]
-b=a[:]
-
-# надо как-то для указанных номеров индексов теперь поменять значения
+print("\nрезультат замены минимального и максимального индекса местами:")
+print(a)

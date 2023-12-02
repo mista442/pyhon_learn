@@ -16,3 +16,16 @@
 выходные данные
 4 5 3 5 0 0 0 0'''
 
+a = [4,0,5,0,3,0,0,5]
+print(a)
+
+zero = 0
+
+for i in a:
+    if i == 0:
+        a.pop(zero)
+        #a.append(0)
+    zero += 1
+print(a)
+print(zero)
+

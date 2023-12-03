@@ -16,13 +16,22 @@
 выходные данные
 4 5 3 5 0 0 0 0'''
 
-a = [4,0,5,0,3,0,0,5]
+
+count = int(input("введите количество чисел "))
+print("введите",count,"разных целых чисел, среди которых будет в том числе и число 0")
+
+a=[]
+user_num = int
+user_num_count = 0
+while user_num_count < count:
+    user_num = int(input())
+    a.append(user_num)
+    user_num_count += 1
 print(a)
 
-b=a.count(0)
-print("количество нулей в списке:",a.count(0),"\n")
+b=a.count(0) # записали - количество раз встречается число 0 в списке.
+print("количество нулей в списке:",b,"\n")
 zero = 0
-
 
 for i in a:
     if i == 0:

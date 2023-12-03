@@ -19,13 +19,17 @@
 a = [4,0,5,0,3,0,0,5]
 print(a)
 
+b=a.count(0)
+print("количество нулей в списке:",a.count(0),"\n")
 zero = 0
+
 
 for i in a:
     if i == 0:
         a.pop(zero)
-        #a.append(0)
+    if a[zero-1] == 0:
+        a.pop(zero-1)
     zero += 1
+while a.count(0) < b:
+    a.append(0)
 print(a)
-print(zero)
-

@@ -29,7 +29,7 @@ elif ravnostoroniy:
 elif ravnobedreniy:
     print("равнобедренный треугольник")
 
-elif pryamougolniy: # c=6, a=6, b=8. Теорема Пифагора: (c*c) == (a*a) + (b*b). По ней считаем прямоугольный треугольник.
+elif pryamougolniy: # c=10, a=6, b=8. Теорема Пифагора: (c*c) == (a*a) + (b*b). По ней считаем прямоугольный треугольник.
     print("прямоугольный треугольный")
 
 elif not ravnostoroniy or ravnobedreniy or pryamougolniy or not_treugolnik:

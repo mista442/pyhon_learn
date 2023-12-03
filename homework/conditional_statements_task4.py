@@ -15,15 +15,14 @@ print()
 flag1=True
 while flag1:
     print('введите размеры ящика:')
-    a1,b1,c1=int(input("длина ")),int(input("высота ")),int(input("ширина "))
+    x,y,z=int(input("длина ")),int(input("высота ")),int(input("ширина "))
 
-    if a1 <=0 or b1 <=0 or c1 <=0:
+    if x <=0 or y <=0 or z <=0:
         print("\nвведите параметры размера ящика равными > 0\n")
     else:
         flag1=False
 
-if a1 > a and b1 > b1 and c1 > c:
-    print()
+if (x > a and y > b and z > c) and (x > b and x > c) and (z > a and z > b):
 
     print("\nкоробка влезает в ящик")
 else:

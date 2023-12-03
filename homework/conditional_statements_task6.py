@@ -15,14 +15,18 @@ while flag:
     else:
         flag=0
 
-if a == b and b == c and a == c:
+ravnostoroniy = a == b and b == c and a == c
+ravnobedreniy = (a == b and c < a and c < b) or (a == c and b < a and b < c) or (c == b and a < b and a < c)
+pryamougolniy = ((c*c) == (a*a) + (b*b)) or ((b*b) == (a*a) + (c*c)) or ((a*a) == (b*b) + (c*c))
+
+if ravnostoroniy:
     print("равносторонний треугольник")
 
-elif (a == b and c < a and c < b) or (a == c and b < a and b < c) or (c == b and a < b and a < c):
+elif ravnobedreniy:
     print("равнобедренный треугольник")
 
-# признаки прямоугольного треугольника. По теореме Пифагора: C в квадрате =  A в квадрате +  B в квадрате.
-# надо понять как записать формулу квадратного корня
-if (a*a) + (b*b) = (c*c)
-elif (a*a) + (c*c) = (b*b)
-elif (b*b) + (c*c) = (a*a)
+elif pryamougolniy: # c=6, a=6, b=8. Теорема Пифагора: (c*c) == (a*a) + (b*b). По ней считаем прямоугольный треугольник.
+    print("прямоугольный треугольный")
+
+elif not ravnostoroniy or ravnobedreniy or pryamougolniy:
+    print("произвольный треугольник")

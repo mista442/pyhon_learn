@@ -166,7 +166,7 @@ d1 = dict()
 print(type(d1)) # <class 'dict'>
 
 d2 = {}
-print(type(d2))
+print(type(d2)) # <class 'dict'>
 
 d1 = dict(Vasya='tester',Boris='designer')
 print(d1)

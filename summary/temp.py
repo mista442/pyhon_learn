@@ -189,25 +189,25 @@
 # s='hello w'
 # print(s+'orld')
 
-floor1 = {
-    'Sw0':{
-        'vendor':'cisco',
-        'mac':'aa-bb-cc',
-        'ip':'192.168.88.10',
-        'ios':'15.4'
-    },
-    'Sw1': {
-        'mac': 'bb-cc-dd',
-        'ip': '192.168.89.10',
-        'ios': '15.4',
-        'vendor': 'cisco'
-    },
-    'Sw2': {
-        'mac': 'cc-dd-ee',
-        'ip': '192.168.90.10',
-        'ios': '15.4',
-        'vendor': 'cisco'
-    }
-}
-
-print(floor1.get(input("введите название устройства ")))
+# floor1 = {
+#     'Sw0':{
+#         'vendor':'cisco',
+#         'mac':'aa-bb-cc',
+#         'ip':'192.168.88.10',
+#         'ios':'15.4'
+#     },
+#     'Sw1': {
+#         'mac': 'bb-cc-dd',
+#         'ip': '192.168.89.10',
+#         'ios': '15.4',
+#         'vendor': 'cisco'
+#     },
+#     'Sw2': {
+#         'mac': 'cc-dd-ee',
+#         'ip': '192.168.90.10',
+#         'ios': '15.4',
+#         'vendor': 'cisco'
+#     }
+# }
+#
+# print(floor1.get(input("введите название устройства ")))

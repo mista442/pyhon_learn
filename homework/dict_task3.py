@@ -42,5 +42,6 @@ london_co = {
 }
 
 a = london_co[(input("введите название устройства "))]
-a_keys = (a.keys())
+a_keys = (list(a.keys())) # то что нужно переделать тип dict_keys в list нашел тут - https://blog.finxter.com/python-print-dictionary-keys-without-dict_keys/
+#print(a_keys)
 print(a[(input("Введите имя параметра: "'{} '.format(a_keys)))])

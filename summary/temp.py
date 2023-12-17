@@ -211,3 +211,10 @@
 # }
 #
 # print(floor1.get(input("введите название устройства ")))
+
+a=[1, 2.2, "test", -8, (10,-5, 'hello')]
+print(a)
+
+#a[4][2] = 'test'
+
+#print(a)

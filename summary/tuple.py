@@ -74,16 +74,16 @@
 #
 # print()
 #
-a1=[1,2,3]
-b1=(1,2,3)
-#
-c1=[1,2,3,4,10,24,'hello',2.3,15]
-d1=(1,2,3,4,10,24,'hello')
-#
-print(a1.__sizeof__()) # вывести размер данных в переменной a1
-print(b1.__sizeof__())
-print(c1.__sizeof__())
-print(d1.__sizeof__())
+# a1=[1,2,3]
+# b1=(1,2,3)
+# #
+# c1=[1,2,3,4,10,24,'hello',2.3,15]
+# d1=(1,2,3,4,10,24,'hello')
+# #
+# print(a1.__sizeof__()) # вывести размер данных в переменной a1
+# print(b1.__sizeof__())
+# print(c1.__sizeof__())
+# print(d1.__sizeof__())
 #
 # #---------------------- изменения типа данных
 #
@@ -94,6 +94,14 @@ print(d1.__sizeof__())
 #
 # print(id(a2))
 # print(id(b2))
+
+a2=[1,2,3]
+print(id(a2))
+print(a2.__sizeof__())
+a2=tuple(a2)
+print(id(a2))
+print(a2.__sizeof__())
+
 #
 # a2[1]=22
 #

@@ -1,5 +1,5 @@
-# a="world hello world friend"
-# print(a.find("friend")) # метод find ищет номер символа в строке - 12. И так же
+a="world hello world friend"
+print(a.find("friend")) # метод find ищет номер символа в строке - 18. (от нуля если считать, то курсор будет перед словом friend).
 #
 # s='FastEthernet/0/{}'
 # print(s.format(2)) # функция format подставляет в фигурные скобки указанное значение
@@ -123,7 +123,7 @@ import setuptools.command.build_ext
 
 #Дан список
 #       0   1  2  3 4  5  6     count_1
-list_1=[21,22,23,24,25,26,27, 28]
+#list_1=[21,22,23,24,25,26,27, 28]
 # пользователь вводит два числа, например 5,  2
 # вывести все значения списка которые делятся на первое число ИЛИ на второе число
 # ИЛИ на разницу чисел 5 - 2 = 3
@@ -132,23 +132,23 @@ list_1=[21,22,23,24,25,26,27, 28]
 
 # 21,22,24,25,25,27,28
 
-flag=True
-while flag:
-    try:
-        print("введите два целых числа")
-
-        num1=int(input())
-        num2=int(input())
-
-        list_2=[]
-
-        for elm in list_1:
-
-            if elm % num1 == 0 or elm % num2 == 0 or elm % (num1-num2) == 0:
-                list_2.append(elm)
-        print(list_2)
-    except ZeroDivisionError:
-      print("делить на ноль нельзя")
+# flag=True
+# while flag:
+#     try:
+#         print("введите два целых числа")
+#
+#         num1=int(input())
+#         num2=int(input())
+#
+#         list_2=[]
+#
+#         for elm in list_1:
+#
+#             if elm % num1 == 0 or elm % num2 == 0 or elm % (num1-num2) == 0:
+#                 list_2.append(elm)
+#         print(list_2)
+#     except ZeroDivisionError:
+#      print("делить на ноль нельзя")
 #    else:
 #       flag=False
   #------------------------------------

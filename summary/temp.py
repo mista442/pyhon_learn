@@ -271,7 +271,17 @@ import random
 # print(a11.__sizeof__())
 # print(a12.__sizeof__())
 
-a1 = {1,2,3,4,5,(1,2,(10,11)),(5,6)}
-b1 = {4,5,6,7,8,(1,2,(10,12)),(5,6)}
-c1 = a1&b1
-print(c1) # {(5, 6), 4, 5}
+# a1 = {1,2,3,4,5,(1,2,(10,11)),(5,6)}
+# b1 = {4,5,6,7,8,(1,2,(10,12)),(5,6)}
+# c1 = a1&b1
+# print(c1) # {(5, 6), 4, 5}
+
+test1 = {10,11,12}
+test2 = {13,13,14}
+
+#print(test1.isdisjoint(test2))
+
+if test1 == test2:
+    print(True)
+else:
+    print(False)

@@ -265,23 +265,9 @@ import random
 # print(len(a10)) # 2
 #
 #
-# a11 = {'a','b','c','c','a','a'}
-# a12 = {'a','b','c','c','a',}
-#
-# print(a11.__sizeof__())
-# print(a12.__sizeof__())
 
-# a1 = {1,2,3,4,5,(1,2,(10,11)),(5,6)}
-# b1 = {4,5,6,7,8,(1,2,(10,12)),(5,6)}
-# c1 = a1&b1
-# print(c1) # {(5, 6), 4, 5}
+vlan, mac, ip = '10', 'aa-bb', '192.168.1.1'
 
-test1 = {10,11,12}
-test2 = {13,13,14}
-
-#print(test1.isdisjoint(test2))
-
-if test1 == test2:
-    print(True)
-else:
-    print(False)
+print(vlan,mac)
+print(mac)
+print("{:>6} {:>1}".format(vlan,mac))

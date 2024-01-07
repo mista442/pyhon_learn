@@ -266,8 +266,12 @@ import random
 #
 #
 
-vlan, mac, ip = '10', 'aa-bb', '192.168.1.1'
+# vlan, mac, ip = '10', 'aa-bb', '192.168.1.1'
+#
+# print(vlan,mac)
+# print(mac)
+# print("{:>6} {:>1}".format(vlan,mac))
 
-print(vlan,mac)
-print(mac)
-print("{:>6} {:>1}".format(vlan,mac))
+aaa = 'a'
+aaa = int(aaa)
+print(aaa)

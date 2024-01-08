@@ -9,6 +9,10 @@
 
 a = int(input("введите число "))
 b = int(input("введите число "))
+c = int
+
+if a > b:
+    c=a[:]
 
 l = []
 for i in range (a,b):

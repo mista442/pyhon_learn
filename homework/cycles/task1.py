@@ -10,21 +10,15 @@
 '''
 
 ip = str(input("введите ip адрес "))
-ip = ip.split('.') # строку переделываем в список, в качестве разделителя элементов указываем точку.
-#print(ip)
+ip = ip.split('.')
 
-unicast = int(ip[0]) >= 1 and int(ip[0]) <= 223
-multicast = int(ip[0]) >= 224 and int(ip[0]) <= 239
-local_broadcast = ip.count('255') == 4
-unassigned = ip.count('0') == 4
-
-if unicast:
+if int(ip[0]) >= 1 and int(ip[0]) <= 223:
     print("unicast")
-elif multicast:
+elif int(ip[0]) >= 224 and int(ip[0]) <= 239:
     print("multicast")
-elif local_broadcast:
-    print("local_broadcast")
-elif unassigned:
+elif ip.count('255') == 4:
+    print("local broadcast")
+elif ip.count('0') == 4:
     print("unassigned")
-elif not unicast or not multicast or not local_broadcast or not unassigned:
-    print('unused')
+else:
+    print("unused")

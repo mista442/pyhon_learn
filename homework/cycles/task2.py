@@ -10,37 +10,33 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
 
-try:
-    ip = str(input("введите ip адрес "))
-    ip = ip.split('.') # строку переделываем в список, в качестве разделителя элементов указываем точку.
 
-    check_ip = []
-    if len(ip) != 4:
-        print("не то")
-        quit() # выходим из программы если проверка на введение корректного ip адреса не пройдена
-    else:
-        if len(ip) == 4:
-            for i in ip:
-                if int(i) >= 0 or int(i) <= 255:
-                    check_ip.append(i)
-        print(check_ip)
+ip = str(input("введите ip адрес "))
+ip = ip.split('.') # строку переделываем в список, в качестве разделителя элементов указываем точку.
 
+check_ip = []
+if len(ip) != 4: # если длина ip адреса не равна 4, то выходим
+    quit("Неправильный IP-адрес")
+else:
+    for i in ip:
+        if not i.isdigit(): # если элемент не является числом, то выходим
+            quit("Неправильный IP-адрес")
+        else:
+            if int(i) < 0 or int(i) > 255: # если число вне диапазона от 0 до 255, то выходим
+                quit("Неправильный IP-адрес")
+            else:
+                check_ip.append(i) # если элемент прошел все проверки, то добавляем его в список
 
-            unicast = int(ip[0]) >= 1 and int(ip[0]) <= 223
-            multicast = int(ip[0]) >= 224 and int(ip[0]) <= 239
-            local_broadcast = ip.count('255') == 4
-            unassigned = ip.count('0') == 4
+#print(check_ip)
 
-            if unicast:
-                print("unicast")
-            elif multicast:
-                print("multicast")
-            elif local_broadcast:
-                print("local_broadcast")
-            elif unassigned:
-                print("unassigned")
-            elif not unicast or not multicast or not local_broadcast or not unassigned:
-                print('unused')
-except:
-    print("Неправильный IP-адрес")
+if int(check_ip[0]) >= 1 and int(check_ip[0]) <= 223:
+    print("unicast")
+elif int(check_ip[0]) >= 224 and int(check_ip[0]) <= 239:
+    print("multicast")
+elif check_ip.count('255') == 4:
+    print("local_broadcast")
+elif check_ip.count('0') == 4:
+    print("unassigned")
+else:
+    print('unused')
 

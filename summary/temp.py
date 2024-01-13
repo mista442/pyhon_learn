@@ -272,6 +272,35 @@ import random
 # print(mac)
 # print("{:>6} {:>1}".format(vlan,mac))
 
-aaa = 'a'
-aaa = int(aaa)
-print(aaa)
+# aaa = 'a'
+# aaa = int(aaa)
+# print(aaa)
+
+# ip = str(input("введите ip адрес "))
+# ip = ip.split('.')
+#
+#
+# for i in ip:
+#      if i.isdigit():
+#          print("yes")
+#      elif not i.isdigit():
+#          print("no")
+
+
+ip = str(input("введите ip адрес "))
+ip = ip.split('.') # строку переделываем в список, в качестве разделителя элементов указываем точку.
+
+check_ip = []
+if len(ip) != 4:
+    quit("не то")
+else:
+    for i in ip:
+        if not i.isdigit():
+            quit("не то1")
+        else:
+            if int(i) < 0 or int(i) > 255:
+                quit("не то2")
+            else:
+                check_ip.append(i)
+
+print(check_ip)

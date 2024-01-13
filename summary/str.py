@@ -100,6 +100,9 @@
 # b=a.replace('Fast','Gigabit')
 # print(b) #GigabitEthernet0/1
 
+# i = '1,2,2,1,3,4,5,6,2'
+# print(i.replace('2','10')) # 1,10,10,1,3,4,5,6,10
+
 #--------------- метод .find
 
 #метод find() по указанному значению ищет подстроку в строке и возвращает первый индекс  найденной подстроки.
@@ -121,6 +124,25 @@
 # print(spisok)
 # print(type(spisok))
 #
-# a1=",".join(spisok)
-# print(a1)
-# print(type(a1))
+# a1="-".join(spisok) # если не укзаывать "-" - то результат будет 10233140. Вот так a1="".join(spisok)
+# print(a1) # 10-23-31-40 (тип str)
+# print(type(a1)) # str
+
+# ------------ метод .format
+
+# специальный символ {} указывает куда подставить указанное значение из .format(value).
+# Значения можно подставлять разного типа (int,str,list...)
+
+# i = str(input("укажите номер интерфейса "))
+# interface = 'FastEthernet0/{}'
+# print(interface.format(i))
+#
+# i2 = str(input("укажите номер интерфейса "))
+# p2 = str(input("укажите номер порт "))
+# interface2 = 'FastEthernet{}/{}'
+# print(interface2.format(i2,p2))
+
+# ip_template = '''
+# IP address: {ip} mask: {mask}
+# '''
+# print(ip_template.format(ip='10.1.1.1',mask='/24')) # IP address: 10.1.1.1 mask: /24

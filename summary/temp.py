@@ -287,20 +287,77 @@ import random
 #          print("no")
 
 
-ip = str(input("введите ip адрес "))
-ip = ip.split('.') # строку переделываем в список, в качестве разделителя элементов указываем точку.
+# ip = str(input("введите ip адрес "))
+# ip = ip.split('.') # строку переделываем в список, в качестве разделителя элементов указываем точку.
+#
+# check_ip = []
+# if len(ip) != 4:
+#     quit("не то")
+# else:
+#     for i in ip:
+#         if not i.isdigit():
+#             quit("не то1")
+#         else:
+#             if int(i) < 0 or int(i) > 255:
+#                 quit("не то2")
+#             else:
+#                 check_ip.append(i)
+#
+# print(check_ip)
 
-check_ip = []
-if len(ip) != 4:
-    quit("не то")
-else:
-    for i in ip:
-        if not i.isdigit():
-            quit("не то1")
-        else:
-            if int(i) < 0 or int(i) > 255:
-                quit("не то2")
-            else:
-                check_ip.append(i)
+# username = input('Введите имя пользователя: ')
+# password = input('Введите пароль: ')
+#
+# password_correct = False
+#
+# while not password_correct:
+#     if len(password) < 8:
+#         print('Пароль слишком короткий\n')
+#     elif username in password:
+#         print('Пароль содержит имя пользователя\n')
+#     else:
+#         print('Пароль для пользователя {} установлен'.format(username))
+#         password_correct = True
+#         continue
+#     password = input('Введите пароль еще раз: ') # возвращение в начало цикла
 
-print(check_ip)
+# some = 0 # Изначально ноль
+# while some < 10: # Работает пока меньше 10
+#   some += 1 # В каждой итерации увеличиваем на 1
+#   if some % 2 == 0: # Если четное, то пропускаем число
+#     continue # Пропуск итерации
+#   print("Значение равно: ", some)
+#
+# '''
+# Значение равно:  1
+# Значение равно:  3
+# Значение равно:  5
+# Значение равно:  7
+# Значение равно:  9
+# '''
+
+#----------------
+
+# try:
+#     n = input('Введите целое число: ')
+#     n = int(n)
+# except ValueError:
+#     print("Неверный ввод")
+# else: # когда в блоке try не возникло исключения
+#     print("Все нормально. Вы ввели число", n)
+# finally: # выполняется в любом случае
+#     print("Конец программы")
+
+# a = ['test','vasya','jora']
+# for i in a:
+# print(*a[1:], sep=', ')
+
+
+# trunk_template = [
+# "switchport trunk encapsulation dot1q",
+# "switchport mode trunk",
+# "switchport trunk allowed vlan",
+# ]
+#
+# for i in trunk_template:
+#     print(trunk_template[0])

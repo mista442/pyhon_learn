@@ -99,9 +99,9 @@ for intf, vlan in trunk.items():
             print(f"  {trunk_template[1]}")
         if command.endswith("allowed vlan"):
             for intf, vlan in trunk.items():
-                if intf == "0/1" and vlan[0] == 'add':
+                if vlan[0] == 'add':
                     print(f"  {command} add {', '.join(vlan[1:])}")
-                elif intf == "0/2" and vlan[0] == 'only':
+                elif vlan[0] == 'only':
                     print(f"  {command} remove {', '.join(vlan[1:])}")
-                elif intf == "0/4" and vlan[0] == 'del':
+                elif vlan[0] == 'del':
                     print(f"  {command} {', '.join(vlan[1:])}")

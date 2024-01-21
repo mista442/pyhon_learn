@@ -361,3 +361,9 @@ import random
 #
 # for i in trunk_template:
 #     print(trunk_template[0])
+
+
+list2 = ['a','b','c','d','e','f',1,2,3,4,5,6,7,8,9,0]
+for i in list2:
+    if isinstance(i , int):
+        print(i)

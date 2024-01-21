@@ -10,8 +10,13 @@ Yablochkin = ['Яблочкин',5,4,5,'10а']
 Grushin = ['Грушин',5,5,5,'10б']
 Lastochkin = ['Ласточкин',4,3,2,'10в']
 
-
 Fio = [Ivanov,Petrov,Yablochkin,Grushin,Lastochkin]
+
+
+classes = [Ivanov[-1],Petrov[-1],Yablochkin[-1],Grushin[-1],Lastochkin[-1]]
+set_classes = set(classes)
+classes = list(set_classes)
+print(classes)
 
 def Object(n,surname):
     l=[]

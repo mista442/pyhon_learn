@@ -1,6 +1,6 @@
 Работа с файлами в python
 
-f = open('example2.txt','r+') 
+f = open('example2.txt','r+')
 
 a=f.read()
 #print(a)

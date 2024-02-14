@@ -4,13 +4,13 @@
 Формирование третьего списка осуществляется с использованием функции'''
 
 a=[7,4,5]
-b=[2,1,3]
+b=[10,1,3]
 
 c=[]
 
 count=0
 #while count < len(a):
-for i in a,b:
+for i in a:
         c.append(a[count]-b[count])
         count = count + 1
 

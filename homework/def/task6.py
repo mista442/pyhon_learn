@@ -3,15 +3,46 @@
 например [5-2, 4-1,3-3] итоговый список [3,3,0].
 Формирование третьего списка осуществляется с использованием функции'''
 
-a=[7,4,5]
-b=[10,1,3]
 
-c=[]
+import random
 
-count=0
-#while count < len(a):
-for i in a:
-        c.append(a[count]-b[count])
-        count = count + 1
+def GenLists():
 
-print(c)
+        l1=[]
+        l2=[]
+
+        n=int(input("укажите количество чисел: "))
+
+        for i in range(n):
+                a=random.randint(1,10)
+                b=random.randint(1,10)
+                l1.append(a)
+                l2.append(b)
+        return l1,l2
+
+list1,list2 = GenLists()
+print(list1)
+print(list2)
+
+def Raznost():
+        l3=[]
+        count = 0
+        for i in list1:
+                l3.append(list1[count]-list2[count])
+                count = count + 1
+        return l3
+list3 = Raznost()
+print(Raznost())
+
+
+# a=[7,4,5]
+# b=[10,1,3]
+#
+# c=[]
+#
+# count=0
+# for i in a:
+#         c.append(a[count]-b[count])
+#         count = count + 1
+#
+# print(c)

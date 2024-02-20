@@ -32,17 +32,4 @@ def Raznost():
                 count = count + 1
         return l3
 list3 = Raznost()
-print(Raznost())
-
-
-# a=[7,4,5]
-# b=[10,1,3]
-#
-# c=[]
-#
-# count=0
-# for i in a:
-#         c.append(a[count]-b[count])
-#         count = count + 1
-#
-# print(c)
+print("Разность элементов между 1 и 2 списком\n", Raznost())

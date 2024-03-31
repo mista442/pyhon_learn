@@ -25,7 +25,7 @@ def GenLists():
         n=int(input("укажите количество элементов в списке: "))
 
         for i in range(n):
-                a=random.randint(1,4)
+                a=random.randint(1,10)
                 l.append(a)
         l.sort() # сортируем полученный список
         return l

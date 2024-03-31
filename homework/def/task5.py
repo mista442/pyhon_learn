@@ -11,5 +11,5 @@ def foo(n):
     for i in l:
         l1.append(l[c-n])
         c = c + 1
-    print(l1)
+    print("изменный список", l1)
 foo(n=int(input("на сколько сместить элементы списка ")))

@@ -11,7 +11,7 @@ def GenLists():
         l1=[]
         l2=[]
 
-        n=int(input("укажите количество элементов в списке: "))
+        n=int(input("\nУкажите количество элементов в списке: "))
 
         for i in range(n):
                 a=random.randint(1,10)
@@ -32,5 +32,5 @@ def Raznost():
                 count = count + 1
         return l3
 list3 = Raznost()
-print("Разность элементов между 1 и 2 списком")
+print("\nРазность элементов между 1 и 2 списком")
 print(Raznost())
